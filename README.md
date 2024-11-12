@@ -6,8 +6,8 @@
 - the pizzeria will add each order to a queue of orders;
 - the pizzeria will serve each pizza in the same order of the queue, to the respective customer;
 - once the pizza is served, the pizzeria will calculate the final price as the sum of all pizzas being ordered by that customer;
-- the pizzeria will display/print all the served pizzas.
-- the pizzeria implements different strategies to maximize profit;
+
+- the pizzeria implements different strategies to maximize profit.
 
 ## Extra details
 - assume the pizzeria has few customers (two or three);
@@ -17,9 +17,12 @@
 
 ## Future ideas/features
 - the pizzeria may run out of certain toppings;
-- the pizzeria may apply various discounts.
+- customers may prefer some toppings over others;
+- customers may also get beverages;
+- pizzas may require different preparation times;
+- the pizzeria may be able to prepare few pizzas concurrently;
 
 ## NOTES
 - This project is under the MIT license;
 - This project is intended for learning/educational porpuses, specifically, in regards of the Java Programming Language and various Programming Patterns and Design. As so, it does not claim to be the most correct or efficient solution;
-- This project was developped using Java 17.0.11.
+- This project was developed using Java 17.0.11 and Gradle 8.11;
