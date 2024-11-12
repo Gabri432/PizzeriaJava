@@ -26,6 +26,10 @@ public class Pizzeria {
 
     public void serveOrders() {}
 
+    public String getOrders() {
+        return "";
+    }
+
     @Override
     public String toString() {
         return super.toString();
