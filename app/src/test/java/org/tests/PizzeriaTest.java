@@ -36,7 +36,7 @@ public class PizzeriaTest {
         expectedOutput.append("Paul has ordered a normal pizza\n");
         expectedOutput.append("Paul has ordered a pizza with sardinas\n");
         expectedOutput.append("Paul has ordered a pizza with sausages and a lot of cheese\n");
-        expectedOutput.append("Mike has ordered a pizza with a lot of mushrooms and a lot of cheese");
+        expectedOutput.append("Mike has ordered a pizza with a lot of mushrooms and a lot of cheese\n");
         assertEquals(expectedOutput.toString(), pizzeria.getOrders());
 
     }
