@@ -11,7 +11,7 @@ public class Pizzeria{
 
     private Pizzeria() {
         orders = new ArrayList<>();
-        nextHandler = new KitchenHandler();
+        nextHandler = KitchenHandler.getInstance();
     }
 
     private static class PizzeriaHelper {
