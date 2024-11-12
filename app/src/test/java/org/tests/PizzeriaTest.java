@@ -29,7 +29,6 @@ public class PizzeriaTest {
         pizzeria.takeOrder(paul, pizzaOfPaulToppings3);
         String[] pizzaOfMikeToppings4 = {Topping.MUSHROOMS.name(), Topping.MUSHROOMS.name(), Topping.CHEESE.name(), Topping.CHEESE.name()};
         pizzeria.takeOrder(mike, pizzaOfMikeToppings4);
-        pizzeria.serveOrders();
         StringBuilder expectedOutput = new StringBuilder();
         expectedOutput.append("Mike has ordered a pizza with a lot of onions and tomatoes\n");
         expectedOutput.append("Mike has ordered a pizza with sausages and tomatoes\n");
@@ -42,7 +41,10 @@ public class PizzeriaTest {
     }
 
     @Test
-    void testThatOrdersAreIssuedCorrectly() {}
+    void testThatOrdersAreIssuedCorrectly() {
+        /*testThatCustomerOrdersAreInRightFormat();
+        pizzeria.serveOrders();*/
+    }
 
     @Test
     void testThatPricesAreCorrect() {}
