@@ -42,9 +42,6 @@ public class PizzeriaTest {
     }
 
     @Test
-    void testThatOrdersAreTakenCorrectly() {}
-
-    @Test
     void testThatOrdersAreIssuedCorrectly() {}
 
     @Test
