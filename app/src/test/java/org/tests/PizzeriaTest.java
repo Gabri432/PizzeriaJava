@@ -42,9 +42,19 @@ public class PizzeriaTest {
 
     @Test
     void testThatOrdersAreIssuedCorrectly() {
-        /*testThatCustomerOrdersAreInRightFormat();
-        pizzeria.serveOrders();*/
+        testThatCustomerOrdersAreInRightFormat();
+        pizzeria.serveOrders();
+        assertEquals(0, pizzeria.remainingOrders());
     }
+
+    /*
+    @Test
+    void testThatOrdersAreReceivedCorrectly() {
+        testThatCustomerOrdersAreInRightFormat();
+        pizzeria.serveOrders();
+        assertEquals(0, pizzeria.remainingOrders());
+    }
+     */
 
     @Test
     void testThatPricesAreCorrect() {}
