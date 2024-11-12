@@ -24,7 +24,7 @@ public class Pizzeria {
 
     public void takeOrder(Customer cust, String[] toppings) {}
 
-    public void serverOrder() {}
+    public void serveOrder() {}
 
     @Override
     public String toString() {
