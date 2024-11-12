@@ -21,7 +21,7 @@ public class PizzeriaTest {
         pizzeria.takeOrder(mike, pizzaOfMikeToppings1);
         String[] pizzaOfMikeToppings2 = {Topping.SAUSAGES.name(), Topping.TOMATOES.name()};
         pizzeria.takeOrder(mike, pizzaOfMikeToppings2);
-        String[] pizzaOfPaulToppings1 = {};
+        String[] pizzaOfPaulToppings1 = {Topping.NONE.name()};
         pizzeria.takeOrder(paul, pizzaOfPaulToppings1);
         String[] pizzaOfPaulToppings2 = {Topping.SARDINAS.name()};
         pizzeria.takeOrder(paul, pizzaOfPaulToppings2);
@@ -34,7 +34,7 @@ public class PizzeriaTest {
         expectedOutput.append("Mike has ordered a pizza with a lot of onions and tomatoes\n");
         expectedOutput.append("Mike has ordered a pizza with sausages and tomatoes\n");
         expectedOutput.append("Paul has ordered a normal pizza\n");
-        expectedOutput.append("Paul has ordered a pizza sardinas\n");
+        expectedOutput.append("Paul has ordered a pizza with sardinas\n");
         expectedOutput.append("Paul has ordered a pizza with sausages and a lot of cheese\n");
         expectedOutput.append("Mike has ordered a pizza with a lot of mushrooms and a lot of cheese");
         assertEquals(expectedOutput.toString(), pizzeria.getOrders());
