@@ -29,6 +29,7 @@ public class KitchenHandler implements Handler{
         throw new UnsupportedOperationException("Unimplemented method 'handleOrder'");
     }
 
+    @Override
     public boolean isReady(Order order) {
         return false;
     }

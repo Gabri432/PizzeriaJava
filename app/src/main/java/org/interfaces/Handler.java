@@ -7,4 +7,6 @@ public interface Handler {
 
     public void handleOrder(Order order);
 
+    public boolean isReady(Order order);
+
 }

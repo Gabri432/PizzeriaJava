@@ -29,6 +29,9 @@ public class Pizzeria{
     public void serveOrders() {
         for (Order order : orders) {
             nextHandler.handleOrder(order);
+            if (nextHandler.isReady(order)) {
+                orders.remove(order);
+            }
         }
     }
 
