@@ -13,6 +13,7 @@ public class Pizzeria{
     private Pizzeria() {
         orders = new ArrayList<>();
         nextHandler = KitchenHandler.getInstance();
+        nextHandler.setNextHandler(PaymentHandler.getInstance());
     }
 
     private static class PizzeriaHelper {
@@ -48,6 +49,14 @@ public class Pizzeria{
             s.append(order).append("\n");
         }
         return s.toString();
+    }
+
+    public int calculateTotalRevenue() {
+        return PaymentHandler.getInstance().totalCost();
+    }
+
+    public int costPerCustomer(Customer cust) {
+        return PaymentHandler.getInstance().costPerCustomer(cust);
     }
 
     @Override
