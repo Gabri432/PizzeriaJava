@@ -80,8 +80,7 @@ public class ActualPizza implements Pizza {
             int count = entry.getValue(); 
             totalPrice += Topping.valueOf(topping).getBaseToppingPrice() * count;
         }
-        //return totalPrice;
-        return 0;
+        return totalPrice;
     }
 
     @Override
