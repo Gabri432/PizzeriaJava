@@ -48,6 +48,10 @@ public class Order {
        
     }
 
+    public String[] getToppings() {
+        return this.toppings;
+    }
+
     @Override
     public String toString() {
         return customer.getName() + " has ordered a " + formatToppings();
