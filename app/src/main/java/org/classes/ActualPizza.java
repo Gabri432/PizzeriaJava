@@ -74,13 +74,13 @@ public class ActualPizza implements Pizza {
 
     @Override
     public int getPrice() {
-        int sum = 0;
+        int totalPrice = 400; 
         for (Map.Entry<String, Integer> entry : toppingMap.entrySet()) {
             String topping = entry.getKey();
             int count = entry.getValue(); 
-            sum += Topping.valueOf(topping).getBaseToppingPrice() * count;
+            totalPrice += Topping.valueOf(topping).getBaseToppingPrice() * count;
         }
-        //return sum;
+        //return totalPrice;
         return 0;
     }
 
