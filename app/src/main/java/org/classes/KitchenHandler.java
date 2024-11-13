@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.interfaces.Handler;
+import org.interfaces.Pizza;
 
 public class KitchenHandler implements Handler{
     private final List<Order> ordersToPrepare;
@@ -34,7 +35,9 @@ public class KitchenHandler implements Handler{
         cook(order);
     }
 
-    private void cook(Order order) {}
+    private Pizza cook(Order order) {
+        return new ActualPizza(order.getToppings());
+    }
 
     @Override
     public boolean isReady(Order order) {

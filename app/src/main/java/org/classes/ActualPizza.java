@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import org.enums.Topping;
 import org.interfaces.Pizza;
@@ -45,6 +46,25 @@ public class ActualPizza implements Pizza {
             return resultString;
         }
        
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Pizza)) {
+            return false;
+        }
+        Pizza pizza = (Pizza) obj;
+        if (pizza.getPrice() != this.getPrice()) return false;
+        if (!pizza.getDescription().equals(this.getDescription())) return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getDescription(), getPrice());
     }
 
     @Override
