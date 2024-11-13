@@ -52,6 +52,10 @@ public class Order {
         return this.toppings;
     }
 
+    public Customer getCustomer() {
+        return this.customer;
+    }
+
     @Override
     public String toString() {
         return customer.getName() + " has ordered a " + formatToppings();
