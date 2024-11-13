@@ -8,7 +8,7 @@ import org.interfaces.Pizza;
 
 public class KitchenHandler implements Handler{
     private final List<Order> ordersToPrepare;
-    //private final Handler nextHandler = null;
+    private Handler nextHandler;
 
     private KitchenHandler() {
         ordersToPrepare = new ArrayList<>();
@@ -24,15 +24,19 @@ public class KitchenHandler implements Handler{
 
     @Override
     public void setNextHandler(Handler nextHandler) {
-        throw new UnsupportedOperationException("Unimplemented method 'setNextHandler'");
+        this.nextHandler = nextHandler;
     }
 
     @Override
     public void handleOrder(Order order) {
         if (!ordersToPrepare.contains(order)) {
             ordersToPrepare.add(order);
+            cook(order);
+            this.nextHandler.handleOrder(order);
+        } else {
+            this.ordersToPrepare.remove(order);
+            
         }
-        cook(order);
     }
 
     private Pizza cook(Order order) {
