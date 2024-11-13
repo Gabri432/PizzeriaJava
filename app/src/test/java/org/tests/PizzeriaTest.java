@@ -1,10 +1,9 @@
 package org.tests;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.classes.Customer;
 import org.classes.Pizzeria;
 import org.enums.Topping;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class PizzeriaTest {
