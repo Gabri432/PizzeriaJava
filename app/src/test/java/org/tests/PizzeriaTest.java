@@ -64,7 +64,7 @@ public class PizzeriaTest {
         int sumToppingsPizza3 = basePizzaPrice;
         int sumToppingsPizza4 = basePizzaPrice + Topping.SARDINAS.getBaseToppingPrice();
         int sumToppingsPizza5 = basePizzaPrice + Topping.SAUSAGES.getBaseToppingPrice() + Topping.CHEESE.getBaseToppingPrice() * 2;
-        int sumToppingsPizza6 = basePizzaPrice + Topping.MUSHROOMS.getBaseToppingPrice() * 2 * Topping.CHEESE.getBaseToppingPrice() * 2;
+        int sumToppingsPizza6 = basePizzaPrice + Topping.MUSHROOMS.getBaseToppingPrice() * 2 + Topping.CHEESE.getBaseToppingPrice() * 2;
         int expectedTotalRevenue = sumToppingsPizza1 + sumToppingsPizza2 + sumToppingsPizza3 + sumToppingsPizza4 + sumToppingsPizza5 + sumToppingsPizza6;
         assertEquals(expectedTotalRevenue, pizzeria.calculateTotalRevenue());
     }
