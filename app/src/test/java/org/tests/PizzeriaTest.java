@@ -58,9 +58,15 @@ public class PizzeriaTest {
     @Test
     void testThatTotalPricesAreCorrect() {
         testThatOrdersAreIssuedCorrectly();
-        /*int basePizzaPrice = 400;
-        int costOfToppings = 0;
-        assertEquals(0, pizzeria.calculateTotalRevenue())*/;
+        int basePizzaPrice = 400;
+        int sumToppingsPizza1 = basePizzaPrice + Topping.ONIONS.getBaseToppingPrice() * 2 + Topping.TOMATOES.getBaseToppingPrice();
+        int sumToppingsPizza2 = basePizzaPrice + Topping.SAUSAGES.getBaseToppingPrice() + Topping.TOMATOES.getBaseToppingPrice();
+        int sumToppingsPizza3 = basePizzaPrice;
+        int sumToppingsPizza4 = basePizzaPrice + Topping.SARDINAS.getBaseToppingPrice();
+        int sumToppingsPizza5 = basePizzaPrice + Topping.SAUSAGES.getBaseToppingPrice() + Topping.CHEESE.getBaseToppingPrice() * 2;
+        int sumToppingsPizza6 = basePizzaPrice + Topping.MUSHROOMS.getBaseToppingPrice() * 2 * Topping.CHEESE.getBaseToppingPrice() * 2;
+        int expectedTotalRevenue = sumToppingsPizza1 + sumToppingsPizza2 + sumToppingsPizza3 + sumToppingsPizza4 + sumToppingsPizza5 + sumToppingsPizza6;
+        assertEquals(expectedTotalRevenue, pizzeria.calculateTotalRevenue());
     }
 
     @Test
