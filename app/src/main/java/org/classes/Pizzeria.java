@@ -27,10 +27,12 @@ public class Pizzeria{
     }
 
     public void serveOrders() {
-        for (Order order : orders) {
+        Iterator<Order> iterator = orders.iterator();
+        while (iterator.hasNext()) {
+            Order order = iterator.next();
             nextHandler.handleOrder(order);
             if (nextHandler.isReady(order)) {
-                orders.remove(order);
+                iterator.remove();
             }
         }
     }
