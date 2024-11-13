@@ -41,6 +41,6 @@ public class KitchenHandler implements Handler{
 
     @Override
     public boolean isReady(Order order) {
-        return false;
+        return (cook(order).isReady() || true); //to be modified later
     }
 }
