@@ -1,12 +1,16 @@
 package org.classes;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.interfaces.Handler;
 
 public class KitchenHandler implements Handler{
+    private final List<Order> ordersToPrepare;
+    //private final Handler nextHandler = null;
 
     private KitchenHandler() {
+        ordersToPrepare = new ArrayList<>();
     }
 
     private static class KitchenHandlerHelper {
@@ -19,15 +23,18 @@ public class KitchenHandler implements Handler{
 
     @Override
     public void setNextHandler(Handler nextHandler) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setNextHandler'");
     }
 
     @Override
     public void handleOrder(Order order) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleOrder'");
+        if (!ordersToPrepare.contains(order)) {
+            ordersToPrepare.add(order);
+        }
+        cook(order);
     }
+
+    private void cook(Order order) {}
 
     @Override
     public boolean isReady(Order order) {
