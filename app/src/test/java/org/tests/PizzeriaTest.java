@@ -56,7 +56,12 @@ public class PizzeriaTest {
      */
 
     @Test
-    void testThatPricesAreCorrect() {}
+    void testThatTotalPricesAreCorrect() {
+        testThatOrdersAreIssuedCorrectly();
+        /*int basePizzaPrice = 400;
+        int costOfToppings = 0;
+        assertEquals(0, pizzeria.calculateTotalRevenue())*/;
+    }
 
     @Test
     void testThatStrategy1() {}
